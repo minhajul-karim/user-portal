@@ -1,0 +1,59 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Resize images on login & registration form */
+.icons {
+  width: 50px;
+  height: 50px;
+}
+
+/* Set border on forms */
+.auth-form {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 990px) {
+  /* Reduce padding of dropdown nav */
+  .dropdown-nav {
+    padding: 0.5rem 0;
+  }
+}
+
+.navbar {
+  border-bottom: 1px solid #ced4da;
+}
+
+footer {
+  border-top: 1px solid #ced4da;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  border: 1px solid #ced4da;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  border-bottom: 1px solid #ced4da;
+}
+
+.content {
+  width: 75%;
+}
+
+.content-header {
+  border-bottom: 1px solid #ced4da;
+}
+
+#user-table_wrapper {
+  width: 100%;
+  padding: 1em;
+}
