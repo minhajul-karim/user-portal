@@ -25,7 +25,7 @@ class RegisterController {
                                                                 phone: params.phone,
                                                                 birthdate: params.birthdate,
                                                                 address: params.address).save()
-            def role = Role.get(params.role.id)
+            def role = Role.get(params.role)
             if(user) {
                 UserRole.create user, role
 

@@ -11,7 +11,7 @@
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <asset:stylesheet src="style.css"/>
 
-  <title>Registration - User Portal</title>
+  <title>Registration Page</title>
 </head>
 
 <body>
@@ -23,12 +23,16 @@
     </g:if>
     <g:form class="auth-form p-5 mb-4" action="create">
       <%-- Role --%>
-      <div class="d-md-flex mb-2">
+      <div class="d-md-flex mb-2" style="display:none !important;">
         <div class="col-md-3 mx-sm-2">
           <label for="role" class="col-form-label">Role</label>
         </div>
         <div class="col-md-9">
-          <g:select class="form-select" name="role.id" from="${com.portal_pack.Role.list()}" optionKey="id" />
+          <%-- <g:select class="form-select" name="role.id" from="${com.portal_pack.Role.list()}" optionKey="id" /> --%>
+          <select name="role" class="form-select" aria-label="role selection">
+            <option selected value="2">ROLE_USER</option>
+            <option value="1">ROLE_ADMIN</option>
+          </select>
         </div>
       </div> 
       <!-- First Name -->

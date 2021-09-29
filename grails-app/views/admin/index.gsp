@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.2/datatables.min.css" />
   <asset:stylesheet src="style.css"/>
 
-  <title>Admin page</title>
+  <title>User List</title>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -35,7 +35,7 @@
         <div class="nav-item dropdown">
           <a class="dropdown-nav nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            Username
+            <sec:loggedInUserInfo field="firstName" />
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Change Password</a></li>
@@ -73,30 +73,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Minhajul</th>
-              <td>Karim</td>
-              <td>minhajul.kaarim@gmail.com</td>
-              <td>+123456789</td>
-            </tr>
-            <tr>
-              <td>Abul</th>
-              <td>Hasnat</td>
-              <td>abul.hasnat@gmail.com</td>
-              <td>+123456789</td>
-            </tr>
-            <tr>
-              <td>Iffat</th>
-              <td>Jahan</td>
-              <td>jahan.kaarim@gmail.com</td>
-              <td>+123456789</td>
-            </tr>
-            <tr>
-              <td>Jobayer</th>
-              <td>Mojumder</td>
-              <td>jobayer.kaarim@gmail.com</td>
-              <td>+123456789</td>
-            </tr>
+            <g:each var="item" in="${ users }">
+              <tr>
+                <td>${item.firstName}</th>
+                <td>${item.lastName}</td>
+                <td>${item.username}</td>
+                <td>${item.phone}</td>
+              </tr>
+            </g:each>
           </tbody>
         </table>
       </div>
