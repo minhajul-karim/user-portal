@@ -9,9 +9,10 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.2/datatables.min.css" />
   <asset:stylesheet src="style.css"/>
 
-  <title>Profile Page</title>
+  <title>Admin page</title>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -34,7 +35,7 @@
         <div class="nav-item dropdown">
           <a class="dropdown-nav nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <sec:loggedInUserInfo field="firstName" />
+            Username
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Change Password</a></li>
@@ -51,21 +52,53 @@
   <main class="d-flex h-100">
     <section class="sidebar bg-light">
       <ul>
-        <li class="text-center"><a href="#" class="d-block p-2">Profile Page</a></li>
-        <li class="text-center"><a href="#" class="d-block p-2">Change Password</a></li>
+        <li class="text-center"><a href="#" class="d-block p-2">User List</a></li>
       </ul>
     </section>
     <section class="content d-flex flex-column align-items-center">
-      <div class="content-header w-100 p-3">
-        <h1 class="text-center"><sec:loggedInUserInfo field="firstName" />'s Profile</h1>
+      <div class="content-header w-100 p-2 d-flex justify-content-between align-items-center">
+        <h1 class="text-center">User List</h1>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
       </div>
-      <div class="content-details p-2 mt-5">
-        <p>First Name: <span><sec:loggedInUserInfo field="firstName" /></span></p>
-        <p>Last Name: <span><sec:loggedInUserInfo field="lastName" /></span></p>
-        <p>Address: <span><sec:loggedInUserInfo field="address" /></span></p>
-        <p>Phone: <span><sec:loggedInUserInfo field="phone" /></span></p>
-        <p>Email: <span><sec:loggedInUserInfo field="username" /></span></p>
-        <p>Birthdate: <span><sec:loggedInUserInfo field="birthdate" /></span></p>
+      <div class="table-responsive w-100">
+        <table class="table table-striped" id="user-table">
+          <thead>
+            <tr>
+              <th scope=" col">First name</th>
+              <th scope="col">Last name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Minhajul</th>
+              <td>Karim</td>
+              <td>minhajul.kaarim@gmail.com</td>
+              <td>+123456789</td>
+            </tr>
+            <tr>
+              <td>Abul</th>
+              <td>Hasnat</td>
+              <td>abul.hasnat@gmail.com</td>
+              <td>+123456789</td>
+            </tr>
+            <tr>
+              <td>Iffat</th>
+              <td>Jahan</td>
+              <td>jahan.kaarim@gmail.com</td>
+              <td>+123456789</td>
+            </tr>
+            <tr>
+              <td>Jobayer</th>
+              <td>Mojumder</td>
+              <td>jobayer.kaarim@gmail.com</td>
+              <td>+123456789</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
@@ -79,6 +112,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.2/datatables.min.js"></script> -->
+  <script>
+    $(document).ready(function () {
+      $('#user-table').DataTable({
+        paging: false,
+        searching: false,
+        info: false
+      });
+    });
+  </script>
 </body>
 
 </html>
