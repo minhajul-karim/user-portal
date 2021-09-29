@@ -28,11 +28,11 @@
       </div>
       <div class="mb-3">
         <label for="inputPassword" class="form-label w-100 text-center">Password</label>
-        <input type="password" class="form-control" id="inputPassword">
+        <input type="password" name="password" class="form-control" id="inputPassword">
       </div>
       <div class="btn-container d-flex align-items-center btn-container justify-content-around">
         <button type="submit" class="btn btn-primary">Log in</button>
-        <button class="btn btn-primary">Clear</button>
+        <a href="#" class="btn btn-primary" role="button">Clear</a>
       </div>
       <p class="text-center my-4">Are you new here? <g:link controller="register">Register Now</g:link></p>
     </g:form>
