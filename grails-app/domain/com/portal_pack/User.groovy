@@ -28,8 +28,8 @@ class User implements Serializable {
     }
 
     static constraints = {
-        firstName size: 2..20, blank: false, 
-        lastName size: 2..20, blank: false, 
+        firstName size: 2..20, blank: false
+        lastName size: 2..20, blank: false 
         username blank: false, unique: true
         password blank: false, password: true
         phone size: 5..30, blank: false
