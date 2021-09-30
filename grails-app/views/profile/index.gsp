@@ -51,7 +51,7 @@
   <main class="d-flex h-100">
     <section class="sidebar bg-light">
       <ul>
-        <li class="text-center"><a href="#" class="d-block p-2">Profile Page</a></li>
+        <li class="text-center"><a href="/profile" class="d-block p-2">Profile Page</a></li>
         <li class="text-center"><a href="#" class="d-block p-2">Change Password</a></li>
       </ul>
     </section>
