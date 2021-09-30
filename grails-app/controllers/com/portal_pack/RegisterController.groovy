@@ -18,6 +18,13 @@ class RegisterController {
     def create() {
         // Create new user with unique email only
         try {
+            // Input validation
+            if (!params.firstName || !params.lastName || !params.username || !params.password 
+            || !params.phone || !params.birthdate || !params.address) {
+                flash.message = "Please fill up all fields!"
+                redirect action: "index"
+                return
+            }
             def user = User.findByUsername(params.username)
             if (user) {
                 flash.message = "This Email address is not available"

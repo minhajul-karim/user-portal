@@ -41,7 +41,7 @@
           <label for="firstName" class="col-form-label">First Name</label>
         </div>
         <div class="col-md-9">
-          <input type="text" name="firstName" id="firstName" class="form-control" aria-describedby="firstNameHelpInline">
+          <input type="text" name="firstName" id="firstName" class="form-control" aria-describedby="firstNameHelpInline" required>
         </div>
       </div> <!-- End of First Name -->
       <!-- Last Name -->
@@ -50,7 +50,7 @@
           <label for="lastName" class="col-form-label">Last Name</label>
         </div>
         <div class="col-md-9">
-          <input type="text" name="lastName" id="lastName" class="form-control" aria-describedby="lastNameHelpInline">
+          <input type="text" name="lastName" id="lastName" class="form-control" aria-describedby="lastNameHelpInline" required>
         </div>
       </div> <!-- End of Last Name -->
       <!-- Address -->
@@ -59,7 +59,7 @@
           <label for="address" class="col-form-label">Address</label>
         </div>
         <div class="col-md-9">
-          <input type="text" name="address" id="address" class="form-control" aria-describedby="addressHelpInline">
+          <input type="text" name="address" id="address" class="form-control" aria-describedby="addressHelpInline" required>
         </div>
       </div> <!-- End of Address -->
       <!-- Phone -->
@@ -68,7 +68,7 @@
           <label for="phone" class="col-form-label">Phone</label>
         </div>
         <div class="col-md-9">
-          <input type="text" name="phone" id="phone" class="form-control" aria-describedby="phoneHelpInline">
+          <input type="text" name="phone" id="phone" class="form-control" aria-describedby="phoneHelpInline" required>
         </div>
       </div> <!-- End of Phone -->
       <!-- Email -->
@@ -77,7 +77,7 @@
           <label for="email" class="col-form-label">Email</label>
         </div>
         <div class="col-md-9">
-          <input type="email" name="username" id="email" class="form-control" aria-describedby="emailHelpInline">
+          <input type="email" name="username" id="email" class="form-control" aria-describedby="emailHelpInline" required>
           <span id="email-notification"></span>
         </div>
       </div> <!-- End of Email -->
@@ -87,7 +87,7 @@
           <label for="birthdate" class="col-form-label">Birthdate</label>
         </div>
         <div class="col-md-9">
-          <input type="date" name="birthdate" id="birthdate" class="form-control" aria-describedby="birthdateHelpInline">
+          <input type="date" name="birthdate" id="birthdate" class="form-control" aria-describedby="birthdateHelpInline" required>
         </div>
       </div> <!-- End of Birthdate -->
       <!-- Password -->
@@ -96,7 +96,7 @@
           <label for="password" class="col-form-label">Password</label>
         </div>
         <div class="col-md-9">
-          <input type="password" name="password" id="password" class="form-control" aria-describedby="passwordHelpInline">
+          <input type="password" name="password" id="password" class="form-control" aria-describedby="passwordHelpInline" required>
         </div>
       </div> <!-- End of Password -->
       <div class="btn-container d-flex align-items-center btn-container justify-content-around mt-4">

@@ -37,7 +37,7 @@
             <sec:loggedInUserInfo field="firstName" />
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Change Password</a></li>
+            <li><a class="dropdown-item" href="/profile/changePassword">Change Password</a></li>
             <li>
               <g:form controller="logout">
                 <g:submitButton class="dropdown-item" name="Submit" value="Logout" style="color:gray" />
@@ -52,7 +52,7 @@
     <section class="sidebar bg-light">
       <ul>
         <li class="text-center"><a href="/profile" class="d-block p-2">Profile Page</a></li>
-        <li class="text-center"><a href="#" class="d-block p-2">Change Password</a></li>
+        <li class="text-center"><a href="/profile/changePassword" class="d-block p-2">Change Password</a></li>
       </ul>
     </section>
     <section class="content d-flex flex-column align-items-center">

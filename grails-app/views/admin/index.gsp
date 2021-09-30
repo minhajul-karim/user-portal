@@ -38,7 +38,7 @@
             <sec:loggedInUserInfo field="firstName" />
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Change Password</a></li>
+            <li><a class="dropdown-item" href="/profile/changePassword">Change Password</a></li>
             <li>
               <g:form controller="logout">
                 <g:submitButton class="dropdown-item" name="Submit" value="Logout" style="color:gray" />

@@ -49,4 +49,9 @@ $(document).ready(function () {
     $("#inputEmail").val("");
     $("#inputPassword").val("");
   });
+
+  // Change log in error message
+  if ($(".alert").html() === "Sorry, we were not able to find a user with that username and password.") {
+    $(".alert").html("Sorry, incorrect email/password.")
+  }
 });
