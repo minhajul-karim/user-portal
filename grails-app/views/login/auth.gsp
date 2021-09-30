@@ -32,7 +32,7 @@
       </div>
       <div class="btn-container d-flex align-items-center btn-container justify-content-around">
         <button type="submit" class="btn btn-primary">Log in</button>
-        <a href="#" class="btn btn-primary" role="button">Clear</a>
+        <a href="#" class="btn btn-primary" id="clear-btn" role="button">Clear</a>
       </div>
       <p class="text-center my-4">Are you new here? <g:link controller="register">Register Now</g:link></p>
     </g:form>
@@ -47,6 +47,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <asset:javascript src="index.js"/>
 </body>
 
 </html>

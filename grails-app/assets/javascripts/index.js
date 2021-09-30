@@ -41,5 +41,12 @@ $(document).ready(function () {
     $.post("/admin/find", {showAllUsers: true}, function(newTable) {
       $("#user-table_wrapper").html(newTable);
     });
-  })
+  });
+
+  // Clear inputs in login form
+  $("#clear-btn").click(function(event) {
+    event.preventDefault();
+    $("#inputEmail").val("");
+    $("#inputPassword").val("");
+  });
 });
