@@ -47,4 +47,15 @@ class RegisterController {
             return
         }
     }
+
+    def checkEmailAvailability() {
+        try {
+            def user = User.findByUsername(params.username)
+            def resp = user ? [availability: false] : [availability: true]
+            render resp as grails.converters.JSON
+        } catch (ValidationException e) {
+            resp = [error: true]
+            render resp as grails.converters.JSON
+        }
+    }
 }
