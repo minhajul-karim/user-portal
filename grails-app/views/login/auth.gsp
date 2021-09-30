@@ -11,7 +11,7 @@
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <asset:stylesheet src="style.css"/>
 
-  <title>Log In - User Portal</title>
+  <title>Login Page</title>
 </head>
 
 <body class="d-flex flex-column h-100">
