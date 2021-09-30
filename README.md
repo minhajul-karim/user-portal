@@ -19,4 +19,5 @@ This application uses MySQL. GORM has been used to access data from the database
 ## Usage
 
 - Clone this repo
+- Create a MySQL database called `users` or import `users.sql` provided in the repository.
 - Run `grails run-app`

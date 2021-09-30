@@ -92,6 +92,7 @@
       });
     });
   </script>
+  <asset:javascript src="index.js"/>
 </body>
 
 </html>
