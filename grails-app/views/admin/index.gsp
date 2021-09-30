@@ -58,31 +58,12 @@
     <section class="content d-flex flex-column align-items-center">
       <div class="content-header w-100 p-2 d-flex justify-content-between align-items-center">
         <h1 class="text-center">User List</h1>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" id="search-form">
+          <input class="form-control me-2" type="search" id="search-field" placeholder="Search" aria-label="Search">
         </form>
       </div>
-      <div class="table-responsive w-100">
-        <table class="table table-striped" id="user-table">
-          <thead>
-            <tr>
-              <th scope=" col">First name</th>
-              <th scope="col">Last name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-            </tr>
-          </thead>
-          <tbody>
-            <g:each var="item" in="${ users }">
-              <tr>
-                <td>${item.firstName}</th>
-                <td>${item.lastName}</td>
-                <td>${item.username}</td>
-                <td>${item.phone}</td>
-              </tr>
-            </g:each>
-          </tbody>
-        </table>
+      <div class="table-responsive w-100" id="table-container">
+        <g:render template="tableTemplate" model="[users:users]" />
       </div>
     </section>
   </main>
@@ -111,6 +92,7 @@
       });
     });
   </script>
+  <asset:javascript src="index.js"/>
 </body>
 
 </html>

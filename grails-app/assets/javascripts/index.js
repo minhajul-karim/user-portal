@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Email validation
   $("#email").blur(function () {
     var email = $(this).val();
     if (email.length > 0) {
@@ -25,4 +26,20 @@ $(document).ready(function () {
       $("#email-notification").text("");
     }
   });
+
+  // Seach users
+  $("#search-form").submit(function(event) {
+    event.preventDefault();
+    var searchTerm = $("#search-field").val();
+    $.post("/admin/find", {searchTerm: searchTerm}, function(newTable) {
+      $("#user-table_wrapper").html(newTable);
+    });
+  });
+
+  // Display all users after search
+  $("#search-field").blur(function() {
+    $.post("/admin/find", {showAllUsers: true}, function(newTable) {
+      $("#user-table_wrapper").html(newTable);
+    });
+  })
 });
